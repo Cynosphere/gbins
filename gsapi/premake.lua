@@ -40,3 +40,5 @@ SOLUTION"gameserver"
 			links "legacy_stdio_definitions" -- fixes some printf link issues
 			links		{"Ws2_32"}
 		configuration 		"linux"
+		configuration { "linux", "gmake" }
+			buildoptions { "-std=c++0x" }
