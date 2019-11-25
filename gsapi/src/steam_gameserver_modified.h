@@ -1,4 +1,4 @@
-//====== Copyright © 1996-2008, Valve Corporation, All rights reserved. =======
+//====== Copyright Â© 1996-2008, Valve Corporation, All rights reserved. =======
 //
 // Purpose: 
 //
@@ -67,7 +67,7 @@ inline ISteamUGC *SteamGameServerUGC();
 inline ISteamApps *SteamGameServerApps();
 #endif
 
-class CSteamGameServerAPIContext
+/*class CSteamGameServerAPIContext
 {
 public:
 	CSteamGameServerAPIContext() { Clear(); }
@@ -94,7 +94,7 @@ private:
 	ISteamInventory				*m_pSteamInventory;
 	ISteamUGC					*m_pSteamUGC;
 	ISteamApps					*m_pSteamApps;
-};
+};*/
 
 
 // Older SDKs exported this global pointer, but it is no longer supported.
@@ -159,7 +159,7 @@ inline ISteamApps *SteamGameServerApps()			 { _STEAMINTERNAL_ACCESSOR_BODY( Stea
 #endif // !defined( VERSION_SAFE_STEAM_API_INTERFACES ) && !defined( STEAM_API_EXPORTS )
 
 
-inline void CSteamGameServerAPIContext::Clear()
+/*inline void CSteamGameServerAPIContext::Clear()
 {
 	m_pSteamClient = NULL;
 	m_pSteamGameServer = NULL;
@@ -170,7 +170,7 @@ inline void CSteamGameServerAPIContext::Clear()
 	m_pSteamInventory = NULL;
 	m_pSteamUGC = NULL;
 	m_pSteamApps = NULL;
-}
+}*/
 
 // This function must be declared inline in the header so the module using steam_api.dll gets the version names they want.
 inline bool CSteamGameServerAPIContext::Init()
